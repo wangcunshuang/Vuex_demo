@@ -1,30 +1,28 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+  <div class="app-container">
+    <h1>App 根组件</h1>
+    <addition></addition>
+    <p>--------------------------------------</p>
+    <subtraction></subtraction>
   </div>
-  <router-view/>
 </template>
 
-<style lang="less">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+import Addition from './components/Addition.vue'
+import Subtraction from './components/Subtraction.vue'
+export default {
+  data () {
+    return {
 
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
     }
+  },
+  components: {
+    Addition,
+    Subtraction
   }
 }
+</script>
+
+<style>
+
 </style>
